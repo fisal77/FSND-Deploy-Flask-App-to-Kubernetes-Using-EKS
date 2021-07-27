@@ -13,7 +13,9 @@ from flask import Flask, jsonify, request, abort
 
 
 JWT_SECRET = os.environ.get('JWT_SECRET', 'abc123abc1234')
-LOG_LEVEL = os.environ.get('LOG_LEVEL', 'INFO')
+LOG_LEVEL = os.environ.get('LOG_LEVEL', 'INFO')  # LOG_LEVEL - It represents the level of logging. It is optional to be set.
+                                                 # It has a default value as 'INFO', but when debugging an app locally,
+                                                 # you may want to set it to 'DEBUG'.
 
 
 def _logger():
