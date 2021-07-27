@@ -59,6 +59,7 @@ def require_jwt(function):
     return decorated_function
 
 
+# This is my external IP URL: aa491633384f643cebbe25ab4a313218-452183621.us-west-1.elb.amazonaws.com
 @APP.route('/', methods=['POST', 'GET'])
 def health():
     return jsonify("Healthy")
