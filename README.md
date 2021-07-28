@@ -24,6 +24,21 @@ The app relies on a secret set as the environment variable `JWT_SECRET` to produ
  - AWS Account
      - You can create an AWS account by signing up [here](https://aws.amazon.com/#).
      
+
+## Storing Environment variables
+
+Create a file named `.env_file` and save both `JWT_SECRET` and `LOG_LEVEL` into `.env_file`. 
+These environment variables will run locally in your container. 
+Here, we do not need the export command, just an equals sign:
+
+` JWT_SECRET='myjwtsecret'`
+` LOG_LEVEL=DEBUG`
+
+This `.env_file` is only for the purposes of running the container locally, you do not want to push it into the Github or other public repositories. 
+You can prevent this by adding it to your `.gitignore `file, which will cause git to ignore it. 
+To safely store and use secrets in the cloud, use a secure solution such as AWS’s parameter store.
+
+
 ## Project Steps
 
 Completing the project involves several steps:
